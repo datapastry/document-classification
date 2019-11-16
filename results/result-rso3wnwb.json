@@ -1,0 +1,20 @@
+{
+    "run_start": "2019-11-16 06:06:18.118483",
+    "run_end": "2019-11-16 06:06:18.614927",
+    "run_seconds": 0.496444,
+    "results": {
+        "test_score": 0.8281136097929991,
+        "test_score_sem": 0.006491988171377583
+    },
+    "model_info": {
+        "text_column": "text",
+        "type": "DocumentClassifier"
+    },
+    "dataset": {
+        "hash": "2297c3b3b834cb873baade081237c5002973a7cc",
+        "columns": [
+            "text",
+            "relevant"
+        ]
+    }
+}

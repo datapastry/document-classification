@@ -7,12 +7,17 @@ from sklearn.model_selection import StratifiedKFold
 
 
 def get_experiment():
-    dataset = pd.read_csv('test_dataset.csv')
-    # categories = [
-    #     'alt.atheism',
-    #     'talk.religion.misc',
-    # ]
-    # dataset = fetch_20newsgroups(subset='train', categories=categories)
+    # dataset = pd.read_csv('test_dataset.csv')
+    categories = [
+        'alt.atheism',
+        'talk.religion.misc',
+    ]
+    dataset_bunch = fetch_20newsgroups(subset='train', categories=categories)
+    dataset = pd.DataFrame({
+        'text': dataset_bunch['data'],
+        'relevant': dataset_bunch['target'],
+    })
+
     # label_column = dataset.columns[1]
     predictor = DocumentClassifier('text')
     cross_validator = StratifiedKFold(n_splits=2)
