@@ -14,7 +14,7 @@ def get_experiment():
     # ]
     # dataset = fetch_20newsgroups(subset='train', categories=categories)
     # label_column = dataset.columns[1]
-    predictor = DocumentClassifier(['text'])
+    predictor = DocumentClassifier('text')
     cross_validator = StratifiedKFold(n_splits=2)
     scorer = make_scorer(f1_score)
     label_column = 'relevant'
