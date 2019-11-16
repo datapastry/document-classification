@@ -1,0 +1,6 @@
+text,relevant
+This is a short relevant document,1
+This is a short irrelevant document,0
+This is quite a long relevant document,1
+This is quite short irrelevant,0
+This is a very very very very long irrelevant document,0
